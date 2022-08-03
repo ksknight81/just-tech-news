@@ -16,12 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-<<<<<<< HEAD
-// turn on routes
-app.use(routes);
-=======
 app.use(require('./controllers/'));
->>>>>>> develop
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
